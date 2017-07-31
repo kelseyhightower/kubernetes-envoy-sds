@@ -16,3 +16,11 @@ kubectl delete -f services
 ```
 kubectl delete configmap envoy -n kube-system
 ```
+
+```
+kubectl delete deployments nginx
+```
+
+```
+kubectl delete services nginx
+```
