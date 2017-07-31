@@ -8,6 +8,8 @@ Each Kubernetes service can be referenced in an Envoy config by its FQDN. The fo
 nginx.default.svc.cluster.local
 ```
 
+See the [envoy.json](envoy.json) configuration file for a complete example.
+
 ## Usage
 
 ```
