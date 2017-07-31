@@ -1,11 +1,11 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: kubernetes-sds
+  name: kubernetes-envoy-sds
   namespace: kube-system
 spec:
   selector:
-    app: kubernetes-sds
+    app: kubernetes-envoy-sds
   ports:
     - protocol: TCP
       port: 80

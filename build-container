@@ -1,5 +1,5 @@
 #! /bin/bash
 ./build
-docker build -t gcr.io/hightowerlabs/kubernetes-sds:0.0.1 .
-gcloud docker -- push gcr.io/hightowerlabs/kubernetes-sds:0.0.1
-rm kubernetes-sds
+docker build -t gcr.io/hightowerlabs/kubernetes-envoy-sds:0.0.1 .
+gcloud docker -- push gcr.io/hightowerlabs/kubernetes-envoy-sds:0.0.1
+rm kubernetes-envoy-sds

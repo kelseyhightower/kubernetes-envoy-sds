@@ -1,3 +1,3 @@
 FROM scratch
-ADD kubernetes-sds /kubernetes-sds
-ENTRYPOINT ["/kubernetes-sds"]
+ADD kubernetes-envoy-sds /kubernetes-envoy-sds
+ENTRYPOINT ["/kubernetes-envoy-sds"]
