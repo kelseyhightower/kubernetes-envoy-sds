@@ -1,6 +1,6 @@
 # Deploy The Envoy DaemonSet
 
-The [Envoy](https://lyft.github.io/envoy/docs/intro/what_is_envoy.html) will be deployed to each cluster node using a [DaemonSet](https://kubernetes.io/docs/concepts/workloads/controllers/daemonset)
+[Envoy](https://lyft.github.io/envoy/docs/intro/what_is_envoy.html) will be deployed to each cluster node using a [DaemonSet](https://kubernetes.io/docs/concepts/workloads/controllers/daemonset).
 
 ## Deploy Envoy to each node
 
