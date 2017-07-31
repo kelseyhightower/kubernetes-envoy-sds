@@ -62,7 +62,7 @@
         "connect_timeout_ms": 250,
         "lb_type": "round_robin",
         "hosts": [
-          {"url": "tcp://kubernetes-sds:80"}
+          {"url": "tcp://kubernetes-envoy-sds:80"}
         ]       
       },
       "refresh_delay_ms": 1000
