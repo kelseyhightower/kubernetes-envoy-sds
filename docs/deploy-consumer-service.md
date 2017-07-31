@@ -4,9 +4,15 @@ The consumer service is designed to test the [Envoy DaemonSet](deploy-envoy-daem
 
 ## Create an Nginx Deployment
 
+The consumer service will attempt to contact the `nginx.default.svc.cluster.local` service through a local Envoy proxy.
+
+Create a nginx deployment:
+
 ```
 kubectl run nginx --image=nginx:1.13 --replicas=3 --port 80
 ```
+
+Create a nginx service:
 
 ```
 kubectl expose deployment nginx 
