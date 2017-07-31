@@ -22,14 +22,13 @@ The consumer is able to communicate with the local Envoy proxy by referencing th
 ```
 spec:
   containers:
-	- name: consumer
-	  image: gcr.io/hightowerlabs/consumer:0.0.1
-	  imagePullPolicy: Always
-	  env:
-		- name: HOST_IP
-		  valueFrom:
-			fieldRef:
-			  fieldPath: status.hostIP
-	  args:
-		- "-proxy=http://$(HOST_IP):80"
+    - name: consumer
+      image: gcr.io/hightowerlabs/consumer:0.0.1
+      env:
+        - name: HOST_IP
+          valueFrom:
+            fieldRef:
+              fieldPath: status.hostIP
+      args:
+        - "-proxy=http://$(HOST_IP):80"
 ```
