@@ -18,4 +18,4 @@ kubectl apply -f services/kubernetes-envoy-sds.yaml
 * [Deploy The Kubernetes Envoy Service Discovery Service](docs/deploy-kubernetes-envoy-sds.md)
 * [Deploy The Envoy DaemonSet](docs/deploy-envoy-daemonset.md)
 * [Deploy The Consumer Service](docs/deploy-consumer-service.md)
-* [Cleanup](docs/cleanup.sh)
+* [Cleanup](docs/cleanup.md)
