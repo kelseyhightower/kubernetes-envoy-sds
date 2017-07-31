@@ -1,0 +1,42 @@
+kind: DaemonSet
+apiVersion: extensions/v1beta1
+metadata:
+  labels:
+    app: envoy
+  name: envoy
+  namespace: kube-system
+spec:
+  template:
+    metadata:
+      labels:
+        app: envoy
+      name: envoy
+    spec:
+      hostIPC: true
+      hostNetwork: true
+      dnsPolicy: ClusterFirstWithHostNet
+      containers:
+        - name: envoy
+          image: lyft/envoy:4640fc028d65a6e2ee18858ebefcaeed24dffa81
+          command: ["/usr/local/bin/envoy"]
+          args:
+            - "--concurrency 4"
+            - "--config-path /etc/envoy/envoy.json"
+            - "--mode serve"
+          ports:
+            - containerPort: 80
+              protocol: TCP
+          resources:
+            limits:
+              cpu: "1000m"
+              memory: "512Mi"
+            requests:
+              cpu: "100m"
+              memory: "64Mi"
+          volumeMounts:
+            - name: envoy-conf
+              mountPath: /etc/envoy
+      volumes:
+        - name: envoy-conf
+          configMap:
+            name: envoy
