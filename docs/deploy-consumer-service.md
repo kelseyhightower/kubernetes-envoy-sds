@@ -2,6 +2,16 @@
 
 The consumer service is designed to test the [Envoy DaemonSet](deploy-envoy-daemonset.md) and [Kubernetes Envoy Service Discovery Service](deploy-kubernetes-envoy-sds.md) by making HTTP request through a local Envoy proxy.
 
+## Create an Nginx Deployment
+
+```
+kubectl run nginx --image=nginx:1.13 --replicas=3 --port 80
+```
+
+```
+kubectl expose deployment nginx 
+```
+
 ## Deploy the Consumer Service
 
 ```
