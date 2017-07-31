@@ -17,3 +17,5 @@ kubectl apply -f daemonsets/envoy.yaml
 ```
 
 > To ensure Envoy has access to the cluster DNS service, while running in the host network namespace, the `dnsPolicy` of Envoy DaemonSet is set to ClusterFirstWithHostNet.
+
+At this point each Pod can reach the Envoy proxy using the host IP address of the node.
