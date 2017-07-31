@@ -26,6 +26,8 @@ Usage of kubernetes-envoy-sds:
 
 ## Usage Tutorial
 
+This tutorial will walk you through deploying the `kubernetes-envoy-sds` service and an Envoy service mesh across each node in a Kubernetes cluster. Once the Envoy infrastructure is in place you'll have a chance to test it using the `consumer` example service.
+
 * [Deploy The Kubernetes Envoy Service Discovery Service](docs/deploy-kubernetes-envoy-sds.md)
 * [Deploy The Envoy DaemonSet](docs/deploy-envoy-daemonset.md)
 * [Deploy The Consumer Service](docs/deploy-consumer-service.md)
